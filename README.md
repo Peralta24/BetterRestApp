@@ -1,4 +1,4 @@
-# 💤 BetterRest — Project 04 (100 Days of Swift)
+# 💤 BetterRestApp
 
 ## 🧠 Descripción
 **BetterRest** es una aplicación desarrollada con **SwiftUI** que utiliza **machine learning** para ayudar a los usuarios a mejorar sus hábitos de sueño.  
