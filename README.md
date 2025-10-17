@@ -2,7 +2,7 @@
 
 ## 🧠 Descripción
 **BetterRest** es una aplicación desarrollada con **SwiftUI** que utiliza **machine learning** para ayudar a los usuarios a mejorar sus hábitos de sueño.  
-Basada en el curso *100 Days of Swift*, la app predice la hora ideal para ir a dormir en función de:
+La app predice la hora ideal para ir a dormir en función de:
 - La hora en que deseas despertarte  
 - La cantidad de horas que quieres dormir  
 - Tu consumo diario de café ☕  
