@@ -2,20 +2,7 @@ import CoreML
 
 import SwiftUI
 
-struct SleepGoalView: ViewModifier {
-    func body(content: Content) -> some View {
-        content
-            .padding()
-            .font(.largeTitle)
-            .fontWeight(.bold)
-        
-    }
-}
-extension View {
-    func sleepGoal() -> some View {
-        modifier(SleepGoalView())
-    }
-}
+
 struct ContentView: View {
     @State private var wakeUp = dayDefault
     @State private var sleepAmoun = 8.0
@@ -24,7 +11,7 @@ struct ContentView: View {
     @State private var alertTitle = ""
     @State private var alertMessage = ""
     @State private var showAlert = false
-    @State private var showGoal = ""
+    
     static var dayDefault : Date {
         var components = DateComponents()
         components.hour = 7
@@ -54,29 +41,23 @@ struct ContentView: View {
                     Text("Dayli cofee intake")
                         .font(.headline)
                     
-                    Picker("How many cups of coffee",selection: $coffeeAmount) {
-                        ForEach(0...20,id: \.self){
-                            Text("\($0) cup")
-                        }
-                    }
-                    .onChange(of: coffeeAmount){ _ in
-                        calcutateBedTime()
-                    }
-                    
-                    .pickerStyle(.menu)
-                }
-                Section{
-                    Text("Your ideal bedtime is: ")
-                    Text(showGoal)
-                        .sleepGoal()
-                        .foregroundStyle(.green)
+                    Stepper("^[\(coffeeAmount) cup](inflect:true)",value: $coffeeAmount,in: 0...20)
+                        .padding(.horizontal)
                     
                 }
 
             }
             .navigationTitle("BetterRest")
-            
-            
+            .toolbar {
+                Button("Calculate",action: calcutateBedTime)
+            }
+            .alert(alertTitle, isPresented: $showAlert){
+                Button("Ok"){
+                    
+                }
+            }message: {
+                Text(alertMessage)
+            }
         }
     }
     func calcutateBedTime(){
@@ -92,7 +73,6 @@ struct ContentView: View {
             let sleepTime = wakeUp - prediction.actualSleep
             alertTitle = "Your ideal bedtime is"
             alertMessage = sleepTime.formatted(date: .omitted, time: .shortened)
-            showGoal = alertMessage
             
         }catch{
             alertTitle = "Error"
