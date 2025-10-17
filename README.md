@@ -1,46 +1,46 @@
 # 💤 BetterRestApp
 
-## 🧠 Descripción
-**BetterRest** es una aplicación desarrollada con **SwiftUI** que utiliza **machine learning** para ayudar a los usuarios a mejorar sus hábitos de sueño.  
-La app predice la hora ideal para ir a dormir en función de:
-- La hora en que deseas despertarte  
-- La cantidad de horas que quieres dormir  
-- Tu consumo diario de café ☕  
+## 🧠 Description
+**BetterRest** is an app developed with **SwiftUI** that uses **machine learning** to help users improve their sleep habits.  
+The app predicts the ideal bedtime based on:
+- The time you want to wake up  
+- The number of hours you want to sleep  
+- Your daily coffee intake ☕  
 
-El modelo de machine learning (`BetterRest 1.mlmodel`) analiza tus patrones de sueño y te ofrece una recomendación personalizada.
+The machine learning model (`BetterRest 1.mlmodel`) analyzes your sleep patterns and provides a personalized recommendation.
 
 ---
 
-## ⚙️ Tecnologías utilizadas
+## ⚙️ Technologies Used
 - **Swift 6 / SwiftUI**
-- **CoreML** (para el modelo de predicción)
-- **Create ML** (para entrenar el modelo)
-- **Xcode 16** (o superior)
+- **CoreML** (for the prediction model)
+- **Create ML** (to train the model)
+- **Xcode 16** (or later)
 
 ---
 
-## 🧩 Características principales
-✅ Predicción inteligente de la hora ideal para dormir  
-✅ Interfaz limpia y minimalista con SwiftUI  
-✅ Entrenamiento con datos reales de sueño  
-✅ Integración directa con modelos `.mlmodel`  
+## 🧩 Main Features
+✅ Smart prediction of the ideal bedtime  
+✅ Clean and minimalist interface with SwiftUI  
+✅ Training with real sleep data  
+✅ Direct integration with `.mlmodel` files  
 
 ---
 
-## 🖼️ Vista previa
+## 🖼️ Preview
 
-| Pantalla principal | Resultado de predicción |
-|--------------------|-------------------------|
-| <img width="300" alt="Pantalla principal" src="https://github.com/user-attachments/assets/15be1c7e-30b8-4b14-9c66-eab68b4080d4" /> | <img width="300" alt="Resultado de predicción" src="https://github.com/user-attachments/assets/2c140c5f-3736-4cf9-a61b-e8d9129f54c0" /> |
-
+| Main Screen | Prediction Result |
+|-------------|------------------|
+| <img width="300" alt="Main Screen" src="https://github.com/user-attachments/assets/15be1c7e-30b8-4b14-9c66-eab68b4080d4" /> | <img width="300" alt="Prediction Result" src="https://github.com/user-attachments/assets/2c140c5f-3736-4cf9-a61b-e8d9129f54c0" /> |
 
 ---
 
-## 🧰 Cómo ejecutar el proyecto
+## 🧰 How to Run the Project
 
-1. Clona este repositorio:
+1. Clone this repository:
    ```bash
    git clone https://github.com/peralta8086/Project-04.git
-2. Abre el proyecto en Xcode:
+2. Open the project in Xcode:
   open BetterRest.xcodeproj
-3. Ejecuta el proyecto en el simulador o en tu dispositivo:
+3. Run the project in the simulator or on your device:
+  ⌘ + R
